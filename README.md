@@ -2,11 +2,15 @@ This is an improved version of Aldebaran Robotics mt9m114 camera driver.
 It adds features that were requested by the B-Human team.
 
 
+
 === Note ===
+
 The datasheets of the mt9m114 chip are protected by an NDA.
 Therefore I am not allowed to document inner workings of the
 mt9m114 in this document or the source code comments.
 Sorry about that.
+
+
 
 === Changes ===
 
@@ -27,13 +31,18 @@ Sorry about that.
 
 * Some under-the-hood changes to improve debugging.
 
+
+
 === How to Build ===
+
 (1) Download latest Aldebaran Kernel from github.
 (2) Copy driver into drivers/media/video.
 (3) Extract .config from NAO and place it in the kernel's root directory.
 (3) make ARCH=i386 (use the same gcc version that was used to build the kernel)
 (4) Copy driver to NAO /lib/modules/2.6.33.9-rt31-aldebaran-rt/kernel/drivers/media/video/
 (5) Restart NAO.
+
+
 
 === Available V4L2 Commands ===
 
@@ -112,7 +121,9 @@ Default: 1
 Description: Enable/disable fade-to-black feature.
 
 
+
 === Known Bugs ===
+
 Feel free to fix any of the following bugs :-)
 
 * The NAO still crashes when you try to get both images in HD. This is probably 
